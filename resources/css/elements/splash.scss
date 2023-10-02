@@ -25,26 +25,11 @@
         width: 100%;
     }
 
-    #nv-splash-text-container {
-        display: flex;
-        max-height: 13em;
-        overflow: hidden;
-        justify-items: flex-end;
-
-        #nv-splash-text {
-            text-align: start;
-            height: 100%;
-        }
-    }
-
 
     #nv-splash-media {
         aspect-ratio: 1/1;
 
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
         }
     }

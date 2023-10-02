@@ -1,59 +1,58 @@
 import Typewriter from 'typewriter-effect/dist/core';
-import sleep from "./sleep.js"
 
 const splashContainer = document.querySelector('.nv-splash-container');
 const splashContent = splashContainer.querySelector('#nv-splash-content');
 const splashTitle = splashContainer.querySelector('#nv-splash-title');
-const splashText = splashContainer.querySelector('#nv-splash-text');
+const splashText = splashContainer.querySelector('#nv-splash-text-1');
+const splashText2 = splashContainer.querySelector('#nv-splash-text-2');
+const splashMedia = splashContainer.querySelector('#nv-splash-media');
 const splashButtonBlind = splashContainer.querySelector('#nv-splash-button-blind');
 
-const typewriter = new Typewriter(splashText, {
+let typewriter = new Typewriter(splashText, {
     delay: 30,
     deleteSpeed: 0,
     loop: false
 });
 
-const changeSlide = (title) => {
-    splashTitle.animate([
-        { opacity: 1 },
-        { opacity: 0 }
+const changeSlide = () => {
+    splashContainer.classList.toggle("bg-magenta");
+}
+
+setTimeout(() => {
+    splashText.animate([
+        { opacity: 0, maxHeight: '0px' },
+        { opacity: 1, maxHeight: splashText.scrollHeight + 'px' },
     ], {
         duration: 250,
         fill: 'forwards'
     });
-    splashContainer.classList.toggle("bg-magenta");
+
+    typewriter.pauseFor(1000)
+        .typeString('27% der Zürcher*innen haben 2019 gewählt.')
+        .start()
+
+    changeSlide();
     setTimeout(() => {
-        splashTitle.innerText = title;
-        splashTitle.animate([
-            { opacity: 0 },
-            { opacity: 1 }
+        splashMedia.animate([
+            { opacity: 0, maxHeight: '0px' },
+            { opacity: 1, maxHeight: splashMedia.scrollHeight + 'px' },
         ], {
             duration: 250,
             fill: 'forwards'
         });
-    }, 500);
-}
 
-typewriter.pauseFor(1500)
-    .typeString('Wusstest du, dass die Wahlbeteiligung bei den nationalen Wahlen 2015 in Zürich <b>weniger als 50% betrug?</b>')
-    .pauseFor(1000)
-    .start()
-
-setTimeout(() => {
-    changeSlide("Krass, oder?!");
-    typewriter.pauseFor(1500)
-        .typeString(' Weniger als die Hälfte der Menschen, die wählen dürfen, gehen effektiv an die Urne. <b>Das heisst von den 1.5 Millionen Menschen im Kanton, haben nur 27% effektiv mitgemacht.</b>')
-        .pauseFor(1000)
-        .start()
-
-    setTimeout(() => {
-        changeSlide("Lass uns das ändern!");
-        typewriter.pauseFor(1500)
-            .typeString(' Ein Drittel der Bevölkerung geht nicht wählen, obwohl sie könnte. <b>Das müssen wir ändern.</b> Auch du wirst Menschen in deinem Umfeld kennen, die ihr Wahlcouvert ungeöffnet wegschmeissen. Das darf nicht sein. Denn auch wenn es jedes Mal gesagt wird: <b>Diese Wahl ist wahrscheinlich eine der wichtigsten, die wir erleben werden.</b>')
-            .pauseFor(1000)
-            .start()
         setTimeout(() => {
-            changeSlide("Hilfst du mit?");
+            typewriter = new Typewriter(splashText2, {
+                delay: 30,
+                deleteSpeed: 0,
+                loop: false
+            });
+
+            typewriter.typeString("<b>Warst du eine von ihnen?</b>")
+                .pauseFor(1000)
+                .typeString("<br>Lass uns dafür sorgen, dass diese Zahlen 2023 anders aussehen und erinnere deine Freund*innen ans Wählen:")
+                .start();
+
             setTimeout(() => {
                 splashButtonBlind.animate([
                     { opacity: 0, maxHeight: '0px' },
@@ -62,7 +61,8 @@ setTimeout(() => {
                     duration: 250,
                     fill: 'forwards'
                 });
-            }, 1500);
-        }, 13000);
-    }, 8500);
-}, 8000);
+            }, 5500);
+        }, 2000);
+    }, 3000);
+}, 1250);
+
