@@ -21,7 +21,8 @@ const changeSlide = () => {
 setTimeout(() => {
     splashText.animate([
         { opacity: 0, maxHeight: '0px' },
-        { opacity: 1, maxHeight: splashText.scrollHeight + 'px' },
+        { opacity: 1, maxHeight: splashText.scrollHeight + 'px', offset: 0.999 },
+        { opacity: 1, maxHeight: "unset" }
     ], {
         duration: 250,
         fill: 'forwards'
@@ -35,7 +36,8 @@ setTimeout(() => {
     setTimeout(() => {
         splashMedia.animate([
             { opacity: 0, maxHeight: '0px' },
-            { opacity: 1, maxHeight: splashMedia.scrollHeight + 'px' },
+            { opacity: 1, maxHeight: splashMedia.scrollHeight + 'px', offset: 0.999 },
+            { opacity: 1, maxHeight: "unset" }
         ], {
             duration: 250,
             fill: 'forwards'
@@ -47,7 +49,10 @@ setTimeout(() => {
                 deleteSpeed: 0,
                 loop: false
             });
-
+            splashText2.scrollIntoView({ behavior: 'smooth' });
+            setInterval(() => {
+                splashText2.scrollIntoView({ behavior: 'smooth' });
+            }, 500);
             typewriter.typeString("<b>Warst du eine von ihnen?</b>")
                 .pauseFor(1000)
                 .typeString("<br>Lass uns dafür sorgen, dass diese Zahlen 2023 anders aussehen und erinnere deine Freund*innen ans Wählen:")
@@ -61,7 +66,7 @@ setTimeout(() => {
                     duration: 250,
                     fill: 'forwards'
                 });
-            }, 5500);
+            }, 6500);
         }, 2000);
     }, 3000);
 }, 1250);
