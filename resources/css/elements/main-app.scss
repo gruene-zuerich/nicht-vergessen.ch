@@ -1,0 +1,36 @@
+.nv-action-section {
+    display: flex;
+    min-height: calc(100* var(--vh, 1vh));
+    align-items: center;
+    @apply max-w-[1495px] px-4 mx-auto py-16 md:py-24;
+
+    p {
+        max-width: 790px;
+        line-height: 1.3 !important;
+        @apply text-2xl md:text-4xl;
+    }
+
+    input[type=checkbox] {
+
+        &:checked {
+
+            +label {
+                transition: background-color 0.15s ease-in-out, color 0.1s ease-in-out;
+                @apply bg-opacity-100 text-white;
+
+                span {
+                    transition: color 0.1s ease-in-out;
+                    @apply text-white;
+                }
+            }
+        }
+
+        +label {
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+            span {
+                transition: color 0.2s ease-in-out;
+            }
+        }
+    }
+}

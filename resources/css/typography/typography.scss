@@ -20,3 +20,16 @@ html {
     height: 0.8em;
     transform: translateY(-0.1em);
 }
+
+.main-app-screen {
+    h1 {
+        font-size: max(2.5rem, 4.5vw);
+        color: var(--section-accent, theme("colors.magenta"));
+        line-height: 1;
+        @apply font-black uppercase;
+    }
+
+    h1+p {
+        margin-top: 0.75em;
+    }
+}

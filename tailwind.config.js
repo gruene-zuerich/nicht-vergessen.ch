@@ -13,6 +13,10 @@ export default {
             }
         },
     },
+    safelist: [
+        "border-magenta",
+        "border-gruen"
+    ],
     plugins: [],
 }
 

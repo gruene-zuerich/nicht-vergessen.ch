@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <main id="main-content">
+    <main id="main-content" {{$attributes}}>
         {{ $slot }}
     </main>
 
