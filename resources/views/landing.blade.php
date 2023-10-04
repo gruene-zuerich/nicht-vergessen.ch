@@ -72,29 +72,39 @@ $initialMessage = rand(0, count($messages)-1);
         <script src="https://tamaro.raisenow.com/grnes-c83e/latest/widget.js"></script>
         <script>
             window.rnw.tamaro.runWidget('.rnw-widget-container', {
-            paymentWidgetBlocks: [ //Schritt 1
-                "payment_amounts_and_intervals",
-                "payment_payment_methods",
-                "payment_profile",
-                "payment_address",
-                "payment_cover_fee"
-            ],
-            showStoredCustomerStreetNumber: false,
-            showStoredCustomerStreet2: false,
-            showStoredCustomerMessage: false,
-            paymentFormPrefill: {
-                stored_customer_donation_receipt: true,
-                stored_cover_transaction_fee: true,
-                stored_customer_country : "CH",
-            },
-            language: 'de',
-            purposes: ['p1'],
-            purposeDetails: {
-                p1: {
-                    stored_campaign_id: 2,
+                language: 'de',
+                paymentWidgetBlocks: [ //Schritt 1
+                    "payment_purposes",
+                    "payment_amounts_and_intervals",
+                    "payment_payment_methods",
+                    "payment_profile",
+                    "payment_address",
+                    "payment_cover_fee"
+                ],
+                showStoredCustomerStreetNumber: false,
+                showStoredCustomerStreet2: false,
+                showStoredCustomerMessage: false,
+                paymentFormPrefill: {
+                    stored_customer_donation_receipt: true,
+                    stored_cover_transaction_fee: true,
+                    stored_customer_country : "CH",
                 },
-            },
-            });
+                purposes: ['p1','p2'],
+                purposeDetails: {
+                    p1: {
+                        stored_campaign_id: "nicht-vergessen.ch",
+                    }
+                },
+                translations: { //Schritt 3
+                    de: {
+                        purposes: {
+                            p1: 'Eidgenössische Wahlen 2023 : GRÜNE Zürich',
+                        },
+                    },
+                },
+            }).then(function(api){
+                window.api = api;
+            })
         </script>
         <style>
             :root {
