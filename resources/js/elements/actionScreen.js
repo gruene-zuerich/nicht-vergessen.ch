@@ -76,7 +76,7 @@ if (document.querySelector(".nv-regenerate-message")) {
                     window.open(`https://twitter.com/intent/tweet?text=${message + encodeURIComponent("\n#WirUndJetzt #Klimawahl23")}&url=${url}`, "_blank")
                     break
                 case "copy":
-                    navigator.clipboard.writeText(message)
+                    navigator.clipboard.writeText(decodeURIComponent(message) + "\n" + decodeURIComponent(url))
                     notyf.success("Text in die Zwischenablage kopiert! :)")
                     break
             }

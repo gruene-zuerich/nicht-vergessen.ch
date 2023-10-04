@@ -89,7 +89,7 @@ $initialMessage = rand(0, count($messages)-1);
                     stored_cover_transaction_fee: true,
                     stored_customer_country : "CH",
                 },
-                purposes: ['p1','p2'],
+                purposes: ["p1","p2"],
                 purposeDetails: {
                     p1: {
                         stored_campaign_id: "nicht-vergessen.ch",
@@ -99,6 +99,7 @@ $initialMessage = rand(0, count($messages)-1);
                     de: {
                         purposes: {
                             p1: 'Eidgenössische Wahlen 2023 : GRÜNE Zürich',
+                            p2: 'Eidgenössische Wahlen 2023 : GRÜNE Zürich',
                         },
                     },
                 },
