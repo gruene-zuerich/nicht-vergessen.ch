@@ -73,7 +73,7 @@ if (document.querySelector(".nv-regenerate-message")) {
                     window.open(`mailto:?subject=${message}&body=${url}`, "_blank")
                     break
                 case "twitter":
-                    window.open(`https://twitter.com/intent/tweet?text=${message}&url=${url}`, "_blank")
+                    window.open(`https://twitter.com/intent/tweet?text=${message + encodeURIComponent("\n#WirUndJetzt #Klimawahl23")}&url=${url}`, "_blank")
                     break
                 case "copy":
                     navigator.clipboard.writeText(message)
