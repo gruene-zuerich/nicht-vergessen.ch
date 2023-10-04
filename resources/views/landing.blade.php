@@ -28,9 +28,9 @@ $initialMessage = rand(0, count($messages)-1);
 <x-app-layout class="main-app-screen">
     <x-screen-layout id="start" class="current-screen">
         <div class="nv-action-section-content">
-            <h1>Danke, dass du mithilfst!</h1>
-            <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren. <b>Dabei kannst du uns unterstützen.</b></p>
-            <p class="!text-lg">Wähle hier aus, wie du uns beim Mobilisieren unserer Wähler*innen helfen möchtest:</p>
+            <h1>Cool, dass du dabei bist!</h1>
+            <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren. Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erninnern, jetzt GRÜNE Liste 3 zu wählen. <b>So kannst du mitmachen:</b></p>
+            {{-- <p class="!text-lg">Wähle hier aus, wie du uns beim Mobilisieren unserer Wähler*innen helfen möchtest:</p> --}}
             <div class="nv-buttongrid mt-8">
                 <a href="#" class="nv-option-button animate w-full md:w-fit col-span-full" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textmessages">Nachrichten an Bekannte schreiben</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="voicememos">Sprachnachrichten verschicken</a> --}}
