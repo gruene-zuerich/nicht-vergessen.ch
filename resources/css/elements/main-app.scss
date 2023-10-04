@@ -4,12 +4,6 @@
     align-items: center;
     @apply max-w-[1495px] px-4 mx-auto py-16 md:py-24;
 
-    p {
-        max-width: 790px;
-        line-height: 1.3 !important;
-        @apply text-2xl md:text-4xl;
-    }
-
     input[type=checkbox] {
 
         &:checked {
@@ -32,5 +26,110 @@
                 transition: color 0.2s ease-in-out;
             }
         }
+    }
+
+}
+
+.nv-option-button {
+    background-color: var(--section-accent, theme("colors.magenta"));
+    color: white;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+    @apply rounded;
+
+    &:after {
+        width: 0.75em;
+        content: var(--icon, "chevron_right");
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        line-height: 0.5;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga";
+        font-size: 2em;
+        margin-left: 0.5em;
+        transition: margin-left 0.2s ease-in-out, filter 0.2s ease-in-out;
+    }
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &.animate:hover {
+        &:after {
+            margin-left: 0.75em;
+        }
+    }
+}
+
+
+.nv-action-screen {
+    --section-accent: theme("colors.magenta");
+    min-height: calc(100* var(--vh, 1vh));
+    transform: translateX(100vw);
+    width: 100%;
+    height: calc(100* var(--vh, 1vh));
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+
+    .nv-action-screen__inner {
+        margin-top: auto;
+        margin-bottom: auto;
+        @apply flex flex-col items-center justify-center bg-white max-w-[1495px] w-full px-4 mx-auto py-16 md:py-24;
+    }
+
+    p {
+        max-width: 790px;
+        line-height: 1.3 !important;
+        @apply text-xl md:text-3xl;
+    }
+
+    .nv-buttongrid {
+        @apply gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+
+        .nv-option-button {
+            width: 100%;
+        }
+    }
+
+    textarea {
+        max-width: 790px;
+        @apply w-full border-b-2 border-b-gruen min-h-[4rem] p-2 bg-slate-200 mt-2
+    }
+
+    .nv-action-screen__content {
+        width: 100%;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.current-screen {
+        transform: translateX(0);
+    }
+
+    &.action-gruen {
+        --section-accent: theme("colors.gruen");
+    }
+
+    .nv-action-back {
+        color: var(--section-accent);
+        @apply text-sm italic flex items-center mb-4;
     }
 }
