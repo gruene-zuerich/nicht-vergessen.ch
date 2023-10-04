@@ -8,7 +8,7 @@
                 <img src="/images/splash/diagramm.svg" alt="40% of residents are not allowed to vote in Zurich, 33% did not vote in 2019, 27% voted.">
             </div>
             <p id="nv-splash-text-2" class="text-2xl md:text-4xl !leading-normal"></p>
-            <div id="nv-splash-button-blind" class="max-h-0 overflow-hidden pt-12">
+            <div id="nv-splash-button-blind" class="max-h-0 overflow-hidden pt-12 opacity-0">
                 <a href="/" class="font-black text-2xl md:text-4xl bg-white py-3 px-5 text-magenta uppercase rounded block w-fit ml-auto">Let's go! <span class="emoji">😁</span></a>
             </div>
         </div>
