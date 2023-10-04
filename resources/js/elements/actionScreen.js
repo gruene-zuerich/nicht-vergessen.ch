@@ -1,4 +1,8 @@
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
 let history = [];
+const notyf = new Notyf();
+
 
 window.addEventListener("click", function (e) {
     let actionAnchor = e.target.closest("a")
@@ -73,6 +77,7 @@ if (document.querySelector(".nv-regenerate-message")) {
                     break
                 case "copy":
                     navigator.clipboard.writeText(message)
+                    notyf.success("Text in die Zwischenablage kopiert! :)")
                     break
             }
         })
