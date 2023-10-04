@@ -32,13 +32,13 @@ $initialMessage = rand(0, count($messages)-1);
             <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren. <b>Dabei kannst du uns unterstützen.</b></p>
             <p class="!text-lg">Wähle hier aus, wie du uns beim Mobilisieren unserer Wähler*innen helfen möchtest:</p>
             <div class="nv-buttongrid mt-8">
-                <a href="#" class="nv-option-button animate w-full md:w-fit col-span-full" data-screen="textmessages">Nachrichten an Bekannte schreiben</a>
+                <a href="#" class="nv-option-button animate w-full md:w-fit col-span-full" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textmessages">Nachrichten an Bekannte schreiben</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="voicememos">Sprachnachrichten verschicken</a> --}}
-                <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" class="nv-option-button animate w-full md:w-fit">Beim flyern helfen</a>
+                <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="memes">Memes verschicken</a> --}}
-                <a href="https://gruene.ch/kampagne/klimawahl2023-material" target="_blank" class="nv-option-button animate w-full md:w-fit">Material bestellen</a>
+                <a href="https://gruene.ch/kampagne/klimawahl2023-material" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'order material']);" class="nv-option-button animate w-full md:w-fit">Material bestellen</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="downloadables">Bilder für Social Media herunterladen</a> --}}
-                <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="donate">Spenden</a>
+                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'donate']);" data-screen="donate">Spenden</a>
             </div>
         </div>
     </x-screen-layout>
@@ -51,11 +51,11 @@ $initialMessage = rand(0, count($messages)-1);
         <a href="#" class="nv-option-button nv-regenerate-message w-full md:w-fit mt-6" style="--icon: 'refresh'">Neue Nachricht generieren</a>
         <textarea id="examplemessage" class="nv-autosize" data-initial-message="{{$initialMessage}}">{{$messages[$initialMessage]}}</textarea>
         <div class="nv-buttongrid mt-4">
-            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="telegram">Auf Telegram teilen</a>
-            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="whatsapp">Auf Whatsapp teilen</a>
-            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="twitter">Auf Twitter teilen</a>
-            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="email">Per E-Mail teilen</a>
-            <a href="#" class="nv-option-button nv-share-button md:col-span-2" style="--icon: 'content_copy'" data-share="copy">In Zwischenablage kopieren</a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" onclick="_paq.push(['trackEvent', 'Support', 'textmessage', 'telegram']);" data-share="telegram">Auf Telegram teilen</a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" onclick="_paq.push(['trackEvent', 'Support', 'textmessage', 'whatsapp']);" data-share="whatsapp">Auf Whatsapp teilen</a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" onclick="_paq.push(['trackEvent', 'Support', 'textmessage', 'twitter']);" data-share="twitter">Auf Twitter teilen</a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" onclick="_paq.push(['trackEvent', 'Support', 'textmessage', 'email']);" data-share="email">Per E-Mail teilen</a>
+            <a href="#" class="nv-option-button nv-share-button md:col-span-2" style="--icon: 'content_copy'" onclick="_paq.push(['trackEvent', 'Support', 'textmessage', 'copy']);" data-share="copy">In Zwischenablage kopieren</a>
         </div>
         <script type="text/json" id="messages-json">
             {!! json_encode($messages) !!}
