@@ -55,7 +55,7 @@ $initialMessage = rand(0, count($messages)-1);
             <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="whatsapp">Auf Whatsapp teilen</a>
             <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="twitter">Auf Twitter teilen</a>
             <a href="#" class="nv-option-button nv-share-button" style="--icon: 'send'" data-share="email">Per E-Mail teilen</a>
-            <a href="#" class="nv-option-button nv-share-button col-span-2" style="--icon: 'content_copy'" data-share="copy">In Zwischenablage kopieren</a>
+            <a href="#" class="nv-option-button nv-share-button md:col-span-2" style="--icon: 'content_copy'" data-share="copy">In Zwischenablage kopieren</a>
         </div>
         <script type="text/json" id="messages-json">
             {!! json_encode($messages) !!}
