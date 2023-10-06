@@ -129,12 +129,13 @@ window.addEventListener("load", function () {
                         wavesurfer.on("finish", function () {
                             button.classList.remove("playing")
                             button.innerHTML = "play_arrow"
+                            window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                         })
                         button.innerHTML = "pause_circle"
                     } else {
                         button.innerHTML = "play_arrow"
+                        window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                     }
-                    window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                 } else if (button.dataset.action == "download") {
                     let a = document.createElement("a")
                     a.href = `/media/audio/memos/${memo}.mp3`
