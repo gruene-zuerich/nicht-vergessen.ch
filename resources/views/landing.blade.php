@@ -60,7 +60,7 @@ $voicememos = [
                 <div>
                     <div class="nv-voicememo" data-memo="{{$key}}">
                         <img src="/media/images/memos/{{$key}}.png" alt="" class="h-12 w-12">
-                        <div class="nv-voicememo-wave w-3/4 h-8 mt-2"></div>
+                        <div class="nv-voicememo-wave w-3/4 h-8"></div>
                         <div class="nv-voicememo-buttons w-fit whitespace-nowrap flex gap-1">
                             <span class="material-symbols-outlined cursor-pointer !text-2xl p-1 rounded-full bg-magenta text-white w-10 h-10 flex justify-center text-center nv-voicememo-button" data-action="play">play_arrow</span>
                             <span class="material-symbols-outlined cursor-pointer !text-2xl p-1 rounded-full bg-magenta text-white w-10 h-10 flex justify-center text-center nv-voicememo-button" data-action="download">download</span>

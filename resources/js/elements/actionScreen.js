@@ -134,12 +134,14 @@ window.addEventListener("load", function () {
                     } else {
                         button.innerHTML = "play_arrow"
                     }
+                    window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                 } else if (button.dataset.action == "download") {
                     let a = document.createElement("a")
                     a.href = `/media/audio/memos/${memo}.mp3`
                     a.download = `${memo}.mp3`
                     a.click()
                     a.remove()
+                    window._paq.push(['trackEvent', 'Voicememo', 'download', memo]);
                 }
             })
         })
