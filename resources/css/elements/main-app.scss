@@ -132,4 +132,8 @@
         color: var(--section-accent);
         @apply text-sm italic flex items-center mb-4;
     }
+
+    .nv-voicememo {
+        @apply p-3 bg-magenta bg-opacity-5 border-4 border-magenta rounded-md flex gap-x-4 items-center relative
+    }
 }

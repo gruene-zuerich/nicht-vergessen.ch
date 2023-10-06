@@ -23,27 +23,56 @@ $messages = array(
 );
 $initialMessage = rand(0, count($messages)-1);
 
+$voicememos = [
+    "marionna_schlatter" => "Marionna Schlatter",
+    "katharina_prelicz_huber" => "Katharina Prelicz-Huber",
+    "anna_beatrice_schmaltz" => "Anna-Béatrice Schmaltz",
+    "daniel_leupi" => "Daniel Leupi",
+    "balthasar_glaettli" => "Balthasar Glättli",
+];
 @endphp
 
 <x-app-layout class="main-app-screen">
-    <x-screen-layout id="start" class="current-screen">
+    <x-screen-layout id="start" class="current-screen action-gruen">
         <div class="nv-action-section-content">
             <h1>Cool,<br>dass du dabei bist!</h1>
             <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren.</p>
             <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erninnern, jetzt GRÜNE Liste 3 zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
-                <a href="#" class="nv-option-button animate w-full md:w-fit col-span-full" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textmessages">Nachrichten an Bekannte schreiben</a>
-                {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="voicememos">Sprachnachrichten verschicken</a> --}}
+                <a href="#" class="nv-option-button animate w-full md:w-fit md:col-span-2" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
+                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textnachrichten">Nachrichten an Bekannte schreiben</a>
                 <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="memes">Memes verschicken</a> --}}
                 <a href="https://gruene.ch/kampagne/klimawahl2023-material" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'order material']);" class="nv-option-button animate w-full md:w-fit">Material bestellen</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="downloadables">Bilder für Social Media herunterladen</a> --}}
-                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'donate']);" data-screen="donate">Spenden</a>
+                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'donate']);" data-screen="spenden">Spenden</a>
             </div>
         </div>
     </x-screen-layout>
 
-    <x-screen-layout id="textmessages" class="action-gruen">
+    <x-screen-layout id="sprachnachrichten" class="action-magenta">
+        <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
+        <h1>Verschick Sprachmemos!</h1>
+        <p>Wir haben die Spitze unserer National- und Ständeratskandidat*innen Sprachmemos aufnehmen lassen.</p>
+        <p class="!text-base"> Lade die Nachrichten herunter und verschick sie in deinem Bekanntenkreis weiter!</p>
+        <div class="nv-voicememo-grid grid gap-x-10 gap-y-6 grid-cols-1 lg:grid-cols-2 mt-8">
+            @foreach ($voicememos as $key => $voicememo)
+                <div>
+                    <div class="nv-voicememo" data-memo="{{$key}}">
+                        <img src="/media/images/memos/{{$key}}.png" alt="" class="h-12 w-12">
+                        <div class="nv-voicememo-wave w-3/4 h-8 mt-2"></div>
+                        <div class="nv-voicememo-buttons w-fit whitespace-nowrap flex gap-1">
+                            <span class="material-symbols-outlined cursor-pointer !text-2xl p-1 rounded-full bg-magenta text-white w-10 h-10 flex justify-center text-center nv-voicememo-button" data-action="play">play_arrow</span>
+                            <span class="material-symbols-outlined cursor-pointer !text-2xl p-1 rounded-full bg-magenta text-white w-10 h-10 flex justify-center text-center nv-voicememo-button" data-action="download">download</span>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <a href="#" class="nv-action-back w-full justify-end mt-6" data-screen="start">Weiter <span class="material-symbols-outlined">chevron_right</span></a>
+    </x-screen-layout>
+
+    <x-screen-layout id="textnachrichten" class="action-gruen">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Erinnere dein Umfeld!</h1>
         <p>Wir haben dir hier ein Beispiel verfasst, welche du an deine Freund*innen schicken kannst.</p>
@@ -63,7 +92,7 @@ $initialMessage = rand(0, count($messages)-1);
         <a href="#" class="nv-action-back w-full justify-end mt-6" data-screen="start">Weiter <span class="material-symbols-outlined">chevron_right</span></a>
     </x-screen-layout>
 
-    <x-screen-layout id="donate" class="action-magenta">
+    <x-screen-layout id="spenden" class="action-magenta">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Unterstütze uns mit einer Spende!</h1>
         <p>Wahlkämpfe kosten Geld, das ist dir bestimmt nichts Neues. Wir haben aber, im Gegensatz zu unseren politischen Gegner*innen, keine Grosskonzerne und Reiche, die uns ihr Geld im Gegenzu zu politischem Einfluss abtreten. Wir haben Menschen wie dich!</p>

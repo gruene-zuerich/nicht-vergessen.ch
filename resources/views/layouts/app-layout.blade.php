@@ -42,6 +42,7 @@
         {{ $slot }}
     </main>
 
+    @if (env('APP_ENV') == 'production')
     <!-- Matomo -->
     <script>
     var _paq = window._paq = window._paq || [];
@@ -57,6 +58,7 @@
     })();
     </script>
     <!-- End Matomo Code -->
+    @endif
 
     @vite("resources/js/app.js")
 </body>

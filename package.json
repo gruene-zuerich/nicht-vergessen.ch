@@ -19,6 +19,7 @@
         "material-symbols": "^0.13.0",
         "notyf": "^3.10.0",
         "twemoji": "^14.0.2",
-        "typewriter-effect": "^2.21.0"
+        "typewriter-effect": "^2.21.0",
+        "wavesurfer.js": "^7.3.4"
     }
 }

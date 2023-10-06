@@ -24,3 +24,8 @@ Route::get('/', function () {
 Route::get('/splash', function () {
     return view('splash');
 });
+
+
+Route::get("{screen}", function ($screen) {
+    return view("landing");
+});

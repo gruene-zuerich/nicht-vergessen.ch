@@ -2,14 +2,11 @@ import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 let history = [];
 const notyf = new Notyf();
+import WaveSurfer from 'wavesurfer.js'
 
 
-window.addEventListener("click", function (e) {
-    let actionAnchor = e.target.closest("a")
-    if (!actionAnchor || !actionAnchor.dataset.screen) return
-    e.preventDefault()
+const setScreen = (screenId) => {
     let currentScreen = document.querySelector(".nv-action-screen.current-screen")
-    let screenId = actionAnchor.dataset.screen
     let multiply = 1;
     if (screenId == "reverse") {
         screenId = history.pop().id
@@ -34,9 +31,24 @@ window.addEventListener("click", function (e) {
         fill: "forwards"
     })
     history.push(currentScreen)
+    window.history.pushState({ screen: screenId }, "", (screenId == "start") ? "/" : screenId);
     screen.classList.add("current-screen")
     currentScreen.classList.remove("current-screen")
+}
+
+window.addEventListener("click", function (e) {
+    let actionAnchor = e.target.closest("a")
+    if (!actionAnchor || !actionAnchor.dataset.screen) return
+    e.preventDefault()
+    let screenId = actionAnchor.dataset.screen
+    setScreen(screenId)
 })
+
+window.addEventListener("load", function () {
+    let path = window.location.pathname
+    if (path == "/" || path == "") return
+    setScreen(path.replace("/", ""))
+});
 
 
 // Textmessages
@@ -83,3 +95,54 @@ if (document.querySelector(".nv-regenerate-message")) {
         })
     })
 }
+
+
+// Voicemessages
+
+window.addEventListener("load", function () {
+    let wavesurfers = {}
+    let waveElements = document.querySelectorAll(".nv-voicememo-wave")
+    waveElements.forEach((waveElement) => {
+        let memo = waveElement.closest(".nv-voicememo").dataset.memo
+        let wavesurfer = WaveSurfer.create({
+            container: waveElement,
+            waveColor: '#84B414',
+            progressColor: '#E10078',
+            url: `/media/audio/memos/${memo}.mp3`,
+            height: 40,
+        });
+        wavesurfers[memo] = wavesurfer;
+        console.log(wavesurfers)
+    })
+
+    if (document.querySelector(".nv-voicememo-button")) {
+        let buttons = document.querySelectorAll(".nv-voicememo-button")
+        buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+                e.preventDefault()
+                let memo = button.closest(".nv-voicememo").dataset.memo
+                if (button.dataset.action == "play") {
+                    let wavesurfer = wavesurfers[memo]
+                    wavesurfer.playPause()
+                    button.classList.toggle("playing")
+                    if (button.classList.contains("playing")) {
+                        wavesurfer.on("finish", function () {
+                            button.classList.remove("playing")
+                            button.innerHTML = "play_arrow"
+                        })
+                        button.innerHTML = "pause_circle"
+                    } else {
+                        button.innerHTML = "play_arrow"
+                    }
+                } else if (button.dataset.action == "download") {
+                    let a = document.createElement("a")
+                    a.href = `/media/audio/memos/${memo}.mp3`
+                    a.download = `${memo}.mp3`
+                    a.click()
+                    a.remove()
+                }
+            })
+        })
+    }
+});
+
