@@ -39,11 +39,11 @@ $voicememos = [
             <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren.</p>
             <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erninnern, jetzt GRÜNE Liste 3 zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
-                <a href="#" class="nv-option-button animate w-full md:w-fit md:col-span-2" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
+                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textnachrichten">Nachrichten an Bekannte schreiben</a>
                 <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="memes">Memes verschicken</a> --}}
-                <a href="https://gruene-zh.ch/nationale-wahlen/aktiv-werden" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'order material']);" class="nv-option-button animate w-full md:w-fit">Material bestellen</a>
+                {{-- <a href="https://gruene-zh.ch/nationale-wahlen/aktiv-werden" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'order material']);" class="nv-option-button animate w-full md:w-fit">Material bestellen</a> --}}
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" data-screen="downloadables">Bilder für Social Media herunterladen</a> --}}
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'donate']);" data-screen="spenden">Spenden</a>
             </div>
@@ -96,7 +96,7 @@ $voicememos = [
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Unterstütze uns mit einer Spende!</h1>
         <p>Wahlkämpfe kosten Geld, das ist dir bestimmt nichts Neues. Wir haben aber, im Gegensatz zu unseren politischen Gegner*innen, keine Grosskonzerne und Reiche, die uns ihr Geld im Gegenzu zu politischem Einfluss abtreten. Wir haben Menschen wie dich!</p>
-        <p class="!text-base">Danke, dass du unseren Wahlkampf mit einer Spende unterstützt!</p>
+        <p class="!text-base">Danke, dass du den Wahlkampf der GRÜNEN Kanton Zürich mit einer Spende unterstützt!</p>
         {{-- <div class="rnw-widget-container mt-12 max-w-[790px]"></div> --}}
         <div class="dds-widget-container mt-12 max-w-[790px]"></div>
         <script type="text/javascript" referrerpolicy="no-referrer" src="https://widget.raisenow.com/widgets/lema/grnek-85d9/js/dds-init-widget-de.js"></script>
