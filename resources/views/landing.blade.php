@@ -16,6 +16,7 @@ $messages = array(
     "Hoi du 💚!\nDie Zeit für Veränderungen ist gekommen. Wähl Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine GRÜNERE Schweiz aufzubauen. Deine  ist entscheidend! 🗳️💪",
     "Hoi! 👋\nDie Schweiz verdient eine GRÜNE Zukunft. Setze ein starkes Zeichen, indem du heute für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat wählst. Deine Stimme wird gehört! 🗳️🌱",
     "Hey! 🌍\nGemeinsam können wir die GRÜNE Bewegung vorantreiben. Wähle heute Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um die Umwelt und die Zukunft der Schweiz zu schützen. Deine Stimme zählt! 🗳️💚",
+    "Hoi du 💚!\nHast du die Umfragen gesehen? Die SVP wird bereits jetzt als Wahlsiegerin ausgerufen. Das müssen wir unbedingt verhindern! Damit es keinen Rechtsrutsch gibt, wähle heute noch die Grüne Liste 3 und Daniel Leupi in den Ständerat! 🗳️💪",
     "Guten Tag!\Deine Stimme ist der Motor für Veränderungen. Unterstütze Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine nachhaltige Schweiz aufzubauen. Geh wählen! 🗳️🌿",
     "Hallo! 🗳️\nDie Schweiz braucht eine GRÜNE Revolution. Schreib Daniel Leupi auf deine Ständeratsliste und wähl die GRÜNEn Liste 3 in den Nationalrat und gestalte eine nachhaltige Zukunft mit. Deine Stimme zählt! 🗳️💪",
     "Hoi! 👋\nDie GRÜNE Bewegung braucht deine Unterstützung. Wähle heute Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine bessere Schweiz aufzubauen. Deine Stimme ist entscheidend! 🗳️🌱",
@@ -36,8 +37,8 @@ $voicememos = [
     <x-screen-layout id="start" class="current-screen action-gruen">
         <div class="nv-action-section-content">
             <h1>Cool,<br>dass du dabei bist!</h1>
-            <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen mobilisieren.</p>
-            <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erninnern, jetzt GRÜNE Liste 3 zu wählen. <b>So kannst du mitmachen:</b></p>
+            <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen bringen.</p>
+            <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erinnern, jetzt GRÜNE Liste 3 und Daniel Leupi in den Ständerat zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textnachrichten">Nachrichten an Bekannte schreiben</a>
@@ -95,7 +96,7 @@ $voicememos = [
     <x-screen-layout id="spenden" class="action-magenta">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Unterstütze uns mit einer Spende!</h1>
-        <p>Wahlkämpfe kosten Geld, das ist dir bestimmt nichts Neues. Wir haben aber, im Gegensatz zu unseren politischen Gegner*innen, keine Grosskonzerne und Reiche, die uns ihr Geld im Gegenzu zu politischem Einfluss abtreten. Wir haben Menschen wie dich!</p>
+        <p>Anders als unsere politischen Gegner:innen haben wir aus gutem Grund keine Grossspenden von Konzernen, Banken und Flughafen. Wir haben Menschen wie dich!</p>
         <p class="!text-base">Danke, dass du den Wahlkampf der GRÜNEN Kanton Zürich mit einer Spende unterstützt!</p>
         {{-- <div class="rnw-widget-container mt-12 max-w-[790px]"></div> --}}
         <div class="dds-widget-container mt-12 max-w-[790px]"></div>
