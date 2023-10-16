@@ -159,15 +159,15 @@ window.addEventListener("load", function () {
 if (document.querySelector("#copy-source-url")) {
     document.querySelector("#copy-source-url").addEventListener("click", function (e) {
         e.preventDefault()
-        if (button.dataset.state == "copy") {
-            let button = document.querySelector("#copy-source-url")
+        let button = document.querySelector("#copy-source-url")
+        if (button.dataset.state != "copied") {
             let url = button.dataset.sourceUrl;
             navigator.clipboard.writeText(url)
             notyf.success("Link in die Zwischenablage kopiert! :)")
-
-        }
-        setTimeout(() => {
+            button.dataset.state = "copied"
+            button.innerHTML = "Weiter"
+        } else {
             setScreen("gewinnspiel-4");
-        }, 2000);
+        }
     });
 }
