@@ -28,7 +28,7 @@ class GuessController extends Controller
         $validated["uuid"] = Str::uuid()->toString();
         $guess = Guess::create($validated);
         session(["guess" => $guess->uuid]);
-        if ($validated["source"]) {
+        if (isset($validated["source"])) {
             $sourceGuess = Guess::where("uuid", $validated["source"])->first();
             if ($sourceGuess) {
                 $sourceGuess->tickets += 1;
