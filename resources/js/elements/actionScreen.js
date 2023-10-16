@@ -50,6 +50,12 @@ window.addEventListener("load", function () {
     setScreen(path.replace("/", ""))
 });
 
+window.addEventListener("popstate", function (e) {
+    if (e.state && e.state.screen) {
+        setScreen(e.state.screen)
+    }
+});
+
 
 // Textmessages
 
@@ -149,3 +155,16 @@ window.addEventListener("load", function () {
     }
 });
 
+
+if (document.querySelector("#copy-source-url")) {
+    document.querySelector("#copy-source-url").addEventListener("click", function (e) {
+        e.preventDefault()
+        let button = document.querySelector("#copy-source-url")
+        let url = button.dataset.sourceUrl;
+        navigator.clipboard.writeText(url)
+        notyf.success("Link in die Zwischenablage kopiert! :)")
+        setTimeout(() => {
+            setScreen("gewinnspiel-4");
+        }, 1000);
+    });
+}

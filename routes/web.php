@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuessController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,14 @@ Route::get('/splash', function () {
     return view('splash');
 });
 
+Route::post("/guess", [GuessController::class, "create"]);
+
+Route::get("/gewinnspiel/{uuid}", function($uuid) {
+    session(["source" => $uuid]);
+    return redirect("/gewinnspiel");
+});
 
 Route::get("{screen}", function ($screen) {
     return view("landing");
 });
+

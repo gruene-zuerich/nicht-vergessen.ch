@@ -150,4 +150,75 @@ $voicememos = [
         </style>
         <a href="#" class="nv-action-back w-full justify-end mt-6" data-screen="start">Weiter <span class="material-symbols-outlined">chevron_right</span></a>
     </x-screen-layout>
+
+    <x-screen-layout id="gewinnspiel" class="action-magenta">
+        <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
+        <h1>Gewinne einen Znacht!</h1>
+        <p><b>Wie viele Stimmen wird die GRÜNE Liste bei diesen Wahlen bekommen?</b> Schätze richtig und gewinne einen Znacht mit unseren Nationalrät*innen!</p>
+        <p class="!text-base">Bevor wir beginnen, hast du bereits gewählt?</p>
+        <div class="nv-buttongrid mt-4">
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: ''" onclick="_paq.push(['trackEvent', 'Support', 'voted', 'yes']);" data-screen="gewinnspiel-2">Ja, ich habe schon gewählt! <span class="emoji ml-2 text-2xl mt-[-0.5rem]">😄</span></a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: ''" onclick="_paq.push(['trackEvent', 'Support', 'voted', 'no']);" data-screen="gewinnspiel-2">Ich mache es gleich, versprochen! <span class="emoji ml-2 text-2xl mt-[-0.5rem]">😖</span></a>
+        </div>
+        <script type="text/json" id="messages-json">
+            {!! json_encode($messages) !!}
+        </script>
+    </x-screen-layout>
+
+    <x-screen-layout id="gewinnspiel-2" class="action-green">
+        <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
+        <h1>Was schätzt du?</h1>
+        <p>Vor 4 Jahren hat die GRÜNE Liste 2’054’383 Stimmen erhalten. Was denkst du, wie viele sind es am 22. Oktober?</p>
+        <p class="!text-base">Gib eine Schätzung ab und gewinne ein Znachtessen mit den Mitgliedern unserer Nationalratsfraktion!</p>
+        <form action="/guess" method="POST" class="grid md:grid-cols-2 mt-10 gap-6 max-w-2xl">
+            @csrf
+            @if ($errors->any())
+                <div class="bg-red-300 border-2 border-red-700 md:col-span-2 p-2">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            <input type="number" name="guess" class="border-b-2 border-gruen" placeholder="Gib hier deine Schätzung ab!" required>
+            <input type="text" name="phone" class="border-b-2 border-gruen" placeholder="Telefonnummer (optional)">
+            <input type="email" name="email" class="border-b-2 border-gruen md:col-span-2" placeholder="E-Mail Adresse" required>
+            <div class="md:col-span-2">
+                <input type="checkbox" id="optin" name="optin" value="1" checked>
+                <label for="optin" class="inline text-sm">Ich bin einverstanden, dass die Grünen auf dem Laufenden halten. Mehr dazu im <a href="https://gruene.ch/datenschutz" target="_blank" class="underline text-magenta">Datenschutz</a></label>
+            </div>
+            @if (session("source"))
+                <input type="hidden" name="source" value="{{session("source")}}">
+            @endif
+            <button type="submit" class="nv-option-button nv-share-button md:col-span-2" style="--icon: ''">Abschicken</button>
+        </form>
+        <script type="text/json" id="messages-json">
+            {!! json_encode($messages) !!}
+        </script>
+    </x-screen-layout>
+
+    <x-screen-layout id="gewinnspiel-3" class="action-magenta">
+        <h1>Danke für deine Teilnahme!</h1>
+        <p>Erhöhe deine Chancen einen Znacht zu gewinnen! Unter allen Teilnehmer*innen verlosen wir einen zweiten Znacht!</p>
+        <p class="!text-base">Je mehr Menschen du zur Teilnahme an unserem Gewinnspiel motivierst, desto grösser ist deine Chance! Verschicke dazu diesen Link:</p>
+        <div class="flex items-center mt-4">
+            <a href="https://nicht-vergessen.ch/gewinnspiel/{{session("guess")}}" class="py-2 px-3 underline text-magenta bg-magenta bg-opacity-10 border-2 border-magenta inline-block text-sm">
+                https://nicht-vergessen.ch/gewinnspiel/{{session("guess")}}
+            </a>
+        </div>
+        <div class="nv-buttongrid mt-4">
+            <a href="#" class="nv-option-button nv-share-button" id="copy-source-url" data-source-url="https://nicht-vergessen.ch/gewinnspiel/{{session("guess")}}" style="--icon: ''" onclick="_paq.push(['trackEvent', 'Support', 'copy-source-link', 'copied']);">Link kopieren</a>
+            <a href="#" class="nv-option-button nv-share-button" style="--icon: ''" onclick="_paq.push(['trackEvent', 'Support', 'copy-source-link', 'rather-not']);" data-screen="gewinnspiel-4">Lieber nicht <span class="emoji ml-2 text-2xl mt-[-0.5rem]">😅</span></a>
+        </div>
+    </x-screen-layout>
+
+    <x-screen-layout id="gewinnspiel-4" class="action-gruen">
+        <h1>Eine letzte Bitte</h1>
+        <p>Vor vier Jahren haben nur 27% der gesamten Bevölkerung unseres Kantons entschieden, wen wir nach Bern schicken. <b>Das muss sich dieses Jahr ändern.</b></p>
+        <p class="!text-base">Hilf mit, indem du dein Umfeld an die Wahlen erinnerst! Wir haben dir hier einige Hilfsmittel zur Verfügung gestellt:</p>
+        <div class="nv-buttongrid mt-4">
+            <a href="#" class="nv-option-button nv-share-button" data-screen="start">Ich bin dabei!</a>
+        </div>
+    </x-screen-layout>
 </x-app-layout>
