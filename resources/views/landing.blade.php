@@ -198,9 +198,9 @@ $voicememos = [
     </x-screen-layout>
 
     <x-screen-layout id="gewinnspiel-3" class="action-magenta">
-        <h1>Danke für deine Teilnahme!</h1>
-        <p>Erhöhe deine Chancen einen Znacht zu gewinnen! Unter allen Teilnehmer*innen verlosen wir einen zweiten Znacht!</p>
-        <p class="!text-base">Je mehr Menschen du zur Teilnahme an unserem Gewinnspiel motivierst, desto grösser ist deine Chance! Verschicke dazu diesen Link:</p>
+        <h1>Erhöhe deine Chancen!</h1>
+        <p>Unter allen Teilnehmer*innen verlosen wir einen zweiten Platz am Tisch! Für jede Person, die du zur Teilnahme am Gewinnspiel motivierst, erhältst du ein zusätzliches Los.</p>
+        <p class="!text-base"> Verschicke dazu diesen Link:</p>
         <div class="flex items-center mt-4">
             <a href="https://nicht-vergessen.ch/gewinnspiel/{{session("guess")}}" class="py-2 px-3 underline text-magenta bg-magenta bg-opacity-10 border-2 border-magenta inline-block text-sm">
                 https://nicht-vergessen.ch/gewinnspiel/{{session("guess")}}
