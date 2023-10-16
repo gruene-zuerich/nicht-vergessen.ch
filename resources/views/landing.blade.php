@@ -153,7 +153,7 @@ $voicememos = [
     <x-screen-layout id="gewinnspiel" class="action-magenta">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Znacht wie eine Nationalrät*in!</h1>
-        <p><b>Wie viele Stimmen wird die GRÜNE Liste bei diesen Wahlen bekommen?</b> Rate richtig und gewinne einen Znacht mit unseren Nationalrät*innen!</p>
+        <p><b>Wie viele Stimmen wird die GRÜNE Liste im Kanton Zürich bei diesen Wahlen bekommen?</b> Rate richtig und gewinne einen Znacht mit unseren Nationalrät*innen!</p>
         <p class="!text-base">Bevor wir beginnen, hast du bereits gewählt?</p>
         <div class="nv-buttongrid mt-4">
             <a href="#" class="nv-option-button nv-share-button" style="--icon: ''" onclick="_paq.push(['trackEvent', 'Support', 'voted', 'yes']);" data-screen="gewinnspiel-2">Ja, ich habe schon gewählt! <span class="emoji ml-2 text-2xl mt-[-0.5rem]">😄</span></a>
@@ -167,7 +167,7 @@ $voicememos = [
     <x-screen-layout id="gewinnspiel-2" class="action-green">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Was schätzt du?</h1>
-        <p>Vor 4 Jahren hat die GRÜNE Liste 2’054’383 Stimmen erhalten. Was denkst du, wie viele sind es am 22. Oktober?</p>
+        <p>Vor 4 Jahren hat die GRÜNE Liste im Kanton Zürich 2’054’383 Stimmen erhalten. Was denkst du, wie viele sind es am 22. Oktober?</p>
         <p class="!text-base">Gib eine Schätzung ab und gewinne ein Znachtessen mit den GRÜNEN Zürcher Nationalrät*innen!</p>
         <form action="/guess" method="POST" class="grid md:grid-cols-2 mt-10 gap-6 max-w-2xl">
             @csrf
