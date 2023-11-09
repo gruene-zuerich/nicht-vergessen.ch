@@ -40,10 +40,10 @@ $voicememos = [
             <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen bringen.</p>
             <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erinnern, jetzt GRÜNE Liste 3 und Daniel Leupi in den Ständerat zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
-                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
-                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'reffle']);" data-screen="gewinnspiel">Beim Gewinnspiel mitmachen</a>
+                {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a> --}}
+                {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'reffle']);" data-screen="gewinnspiel">Beim Gewinnspiel mitmachen</a> --}}
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textnachrichten">Nachrichten an Bekannte schreiben</a>
-                <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a>
+                {{-- <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a> --}}
                 <a href="https://gruene.ch/mitglied-werden" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'member']);" class="nv-option-button animate w-full md:w-fit">Mitglied werden</a>
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'donate']);" data-screen="spenden">Spenden</a>
             </div>
