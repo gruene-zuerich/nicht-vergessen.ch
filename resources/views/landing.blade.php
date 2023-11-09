@@ -1,26 +1,23 @@
 @php
-$messages = array(
-    "Hallo 🌿\nDie GRÜNE Zukunft der Schweiz liegt in deinen Händen! Gehe heute wählen und setze ein Zeichen für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat. Deine Stimme zählt! 🗳️",
-    "Hey! 🌍\nLass uns gemeinsam die GRÜNE Welle stärken und die SVP stoppen. Jede Stimme für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat ist ein Schritt in die richtige Richtung. Geh wählen! 🗳️💚",
-    "Guten Tag!\nWir können es nicht zulassen, dass die Rechtspopulisten die Wahl gewinnen. Hilf uns, die Schweiz GRÜNER zu machen, indem du heute für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat wählst! Deine Stimme ist wichtig! 🗳️🌿",
-    "Hey! 🌍\nDie GRÜNE Zukunft hängt von deiner Stimme ab. Gemeinsam können wir die SVP besiegen und Daniel Leupi in den Ständerat wählen, während wir die GRÜNE Liste 3 im Nationalrat unterstützen. Gib deine Stimme ab! 🗳️💪",
-    "Hoi! 👋\nNur 27% haben vor 4 Jahren entschieden. Lass uns dieses Mal die Wahlbeteiligung erhöhen und die Schweiz GRÜNER machen. Daniel Leupi und die GRÜNE Liste 3 verdienen deine Stimme! 🗳️🌱",
-    "Hey! 🌍\nWir müssen die GRÜNE Bewegung stärken und die SVP besiegen. Daniel Leupi ist unsere Chance. Geh heute wählen und gestalte die Zukunft der Schweiz mit, indem du auch die GRÜNE Liste 3 im Nationalrat unterstützt! 🗳️💚",
-    "Guten Tag!\nDie Zukunft der Schweiz liegt in deinen Händen. Gemeinsam können wir die SVP aufhalten und die GRÜNE Vision voranbringen. Deine Stimme für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat zählt! 🗳️🌿",
-    "Salut! 💚\nWir können es nicht zulassen, dass die Rechtspopulisten gewinnen. Deine Stimme für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat ist ein Schritt in die richtige Richtung. Geh wählen und verändere die Schweiz! 🗳️💪",
-    "Hoi! 👋\nNur 27% haben vor 4 Jahren entschieden. Lass uns dieses Mal die Wahlbeteiligung steigern und die Schweiz GRÜNER machen. Daniel Leupi und die GRÜNE Liste 3 verdienen deine Stimme! 🗳️🌱",
-    "Hoi du 💚!\nEs ist an der Zeit, die GRÜNE Bewegung zu unterstützen. Geh heute wählen und setze dich für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat ein. Jede Stimme zählt! 🗳️🌍",
-    "Salut! 🌿\nGemeinsam können wir eine nachhaltige Schweiz gestalten. Wähl heute Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat. Deine Stimme ist der Schlüssel zur Veränderung! 🗳️💚",
-    "Hallo! 👋\nDie Schweiz braucht GRÜNE Ideen und Lösungen. Unterstütze Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um unseren Planeten zu schützen. Geh wählen! 🗳️🌱",
-    "Salut! 🗳️\nLass uns die GRÜNE Zukunft gestalten. Deine Stimme für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat ist der Schlüssel zu einer nachhaltigen Schweiz. Wähl heute! 🗳️🌿",
-    "Hoi du 💚!\nDie Zeit für Veränderungen ist gekommen. Wähl Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine GRÜNERE Schweiz aufzubauen. Deine  ist entscheidend! 🗳️💪",
-    "Hoi! 👋\nDie Schweiz verdient eine GRÜNE Zukunft. Setze ein starkes Zeichen, indem du heute für Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat wählst. Deine Stimme wird gehört! 🗳️🌱",
-    "Hey! 🌍\nGemeinsam können wir die GRÜNE Bewegung vorantreiben. Wähle heute Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um die Umwelt und die Zukunft der Schweiz zu schützen. Deine Stimme zählt! 🗳️💚",
-    "Hoi du 💚!\nHast du die Umfragen gesehen? Die SVP wird bereits jetzt als Wahlsiegerin ausgerufen. Das müssen wir unbedingt verhindern! Damit es keinen Rechtsrutsch gibt, wähle heute noch die Grüne Liste 3 und Daniel Leupi in den Ständerat! 🗳️💪",
-    "Guten Tag!\Deine Stimme ist der Motor für Veränderungen. Unterstütze Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine nachhaltige Schweiz aufzubauen. Geh wählen! 🗳️🌿",
-    "Hallo! 🗳️\nDie Schweiz braucht eine GRÜNE Revolution. Schreib Daniel Leupi auf deine Ständeratsliste und wähl die GRÜNEn Liste 3 in den Nationalrat und gestalte eine nachhaltige Zukunft mit. Deine Stimme zählt! 🗳️💪",
-    "Hoi! 👋\nDie GRÜNE Bewegung braucht deine Unterstützung. Wähle heute Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine bessere Schweiz aufzubauen. Deine Stimme ist entscheidend! 🗳️🌱",
-    "Salut! 💚 🌿\nEs ist Zeit, GRÜNE Politik zu fördern. Unterstütz Daniel Leupi im Ständerat und die GRÜNE Liste 3 im Nationalrat, um eine nachhaltige Schweiz zu schaffen. Geh wählen! 🗳️🌍"
+ $messages = array(
+    "Hallo! 👋\nEin SVP-Ständerat Rutz wäre fatal für den Kanton Zürich und fürs Klima! Wähle jetzt Tiana Moser ins «Stöckli». Gib deine Stimme ab! 🗳️💪",
+    "Salut! 👋\nLiegen dir ein weltoffener Kanton Zürich und das Klima auch am Herzen? Dann wähle jetzt Tiana Moser in den Ständerat! Deine Stimme zählt! 🗳️💚",
+    "Hoi! 💚\nBei den Ständeratswahlen gilt es einen weiteren Rechtsrutsch zu verhindern und den Klimaschutz zu stärken. Deswegen braucht es Tiana Moser für den Kanton Zürich im «Stöckli». Geh wählen! 🗳️💪",
+    "Hey! 🌍\nDer Kanton Zürich braucht eine weltoffene und klimapolitisch engagierte Vertretung im «Stöckli»! Darum jetzt Tiana Moser in den Ständerat wählen. Auf deine Stimme kommt es an! 🗳️💪",
+    "Ciao! 👋\nDie Entscheidung liegt bei dir: Tiana Moser für eine zukunftsorientierte Politik oder ein weiterer Rechtsruck mit Gregor Rutz. Wähle jetzt bewusst für einen weltoffenen Kanton und für das Klima! 🗳️💚",
+    "Salü! 👋\nTiana Moser steht für eine fortschrittliche und nachhaltige Politik im «Stöckli». Gib jetzt deine Stimme für die Zukunft ab! 🗳️💪",
+    "Hoi! 💚\nDeine Stimme für Tiana Moser ist eine Stimme für Klimaschutz und weltoffene Politik. Mach mit und wähle jetzt für eine bessere Zukunft! 🗳️🌍",
+    "Hey! 🌍\nTiana Moser setzt sich für eine umweltfreundliche und fortschrittliche Politik ein. Wähle jetzt für den Kanton und das Klima! Deine Stimme macht den Unterschied! 🗳️💚",
+    "Hallo! 👋\nDer Kanton Zürich verdient eine starke Stimme für Klimaschutz und Vernunft im Ständerat. Wähle Tiana Moser für eine nachhaltige Zukunft! 🗳️💚",
+    "Ciao! 👋\nMit Tiana Moser entscheidest du dich für eine umweltfreundliche und weltoffene Vertretung im Ständerat. Gib deine Stimme für eine bessere Zukunft ab! 🗳️💪",
+    "Hoi! 💚\nWähle jetzt Tiana Moser für eine nachhaltige Politik im Ständerat. Deine Stimme zählt für den Kanton und fürs Klima! 🗳️🌍",
+    "Hey! 🌍\nTiana Moser ist die richtige Wahl für eine zukunftsorientierte Politik im «Stöckli». Gib deine Stimme ab und setze ein Zeichen für Klimaschutz! 🗳️💚",
+    "Hallo! 👋\nDeine Stimme entscheidet: Tiana Moser für eine progressive und klimafreundliche Politik im Ständerat. Jetzt wählen gehen! 🗳️💪",
+    "Salü! 👋\nFür eine weltoffene und klimabewusste Vertretung im Ständerat: Wähle jetzt Tiana Moser! Deine Stimme macht den Unterschied! 🗳️💚",
+    "Hoi! 💚\nEntscheide dich für Klimaschutz und eine zukunftsorientierte Politik. Wähle Tiana Moser ins «Stöckli» und gestalte eine bessere Zukunft! 🗳️🌍",
+    "Salut! 👋\nEntscheide dich für Vernunft und Klimaschutz im Ständerat. Wähle jetzt Tiana Moser und setze ein Zeichen für eine bessere Zukunft! 🗳️💪",
+    "Hoi! 💚\nTiana Moser steht für eine weltoffene und klimabewusste Politik. Wähle mit Herz und Verstand für den Kanton und das Klima! 🗳️🌍",
+    "Hey! 🌍\nDeine Stimme zählt für den Kanton und das Klima. Wähle Tiana Moser für eine progressive und nachhaltige Politik im Ständerat! 🗳️💚"
 );
 $initialMessage = rand(0, count($messages)-1);
 
@@ -37,8 +34,9 @@ $voicememos = [
     <x-screen-layout id="start" class="current-screen action-gruen">
         <div class="nv-action-section-content">
             <h1>Cool,<br>dass du dabei bist!</h1>
-            <p>Damit dieses Jahr nicht wieder nur 27% der Bevölkerung entscheiden, wen der Kanton Zürich nach Bern schickt, müssen wir Menschen an die Urnen bringen.</p>
-            <p class="!text-lg"> Wenn wir den Rechtsrutsch im Parlament verhindern wollen, dann müssen wir alle unser Umfeld daran erinnern, jetzt GRÜNE Liste 3 und Daniel Leupi in den Ständerat zu wählen. <b>So kannst du mitmachen:</b></p>
+            <p>Aufgepasst: Bis zum 19. November wählt der Kanton Zürich seine zweite Vertretung im Ständerat.</p>
+            <p class="!text-lg">Beim letzten zweiten Wahlgang der Ständeratswahlen 2019 haben NUR 20 Prozent der Zürcher:innen gewählt. Für so eine wichtige Wahl verdammt wenig, oder? Damit es 2023 anders wird, kommt es jetzt darauf an, möglichst viele Menschen an die Urnen zu bringen.</p>
+            <p class="!text-lg">Wenn wir einen weiteren Rechtsrutsch verhindern und den Klimaschutz im Ständerat stärken wollen, dann müssen wir alle unser Umfeld daran erinnern, jetzt Tiana Moser zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a> --}}
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'reffle']);" data-screen="gewinnspiel">Beim Gewinnspiel mitmachen</a> --}}
