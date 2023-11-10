@@ -73,7 +73,7 @@ $voicememos = [
     <x-screen-layout id="textnachrichten" class="action-gruen">
         <a href="#" class="nv-action-back" data-screen="reverse"><span class="material-symbols-outlined">chevron_left</span> Zurück</a>
         <h1>Erinnere dein Umfeld!</h1>
-        <p>Wir haben dir hier ein Beispiel verfasst, welche du an deine Freund*innen schicken kannst.</p>
+        <p>Wir haben dir hier eine Beispiel-Nachricht verfasst, welche du an deine Freund*innen schicken kannst.</p>
         <p class="!text-base">Passe die Nachricht an oder lass dir eine neue Vorschlagen!</p>
         <a href="#" class="nv-option-button nv-regenerate-message w-full md:w-fit mt-6" style="--icon: 'refresh'">Neue Nachricht generieren</a>
         <textarea id="examplemessage" class="nv-autosize" data-initial-message="{{$initialMessage}}">{{$messages[$initialMessage]}}</textarea>
