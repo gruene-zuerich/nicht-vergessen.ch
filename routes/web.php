@@ -15,10 +15,10 @@ use App\Http\Controllers\GuessController;
 */
 
 Route::get('/', function () {
-    if (!request()->cookie('splash')) {
-        cookie()->queue(cookie()->forever('splash', 'true'));
-        return redirect('/splash');
-    }
+    // if (!request()->cookie('splash')) {
+    //     cookie()->queue(cookie()->forever('splash', 'true'));
+    //     return redirect('/splash');
+    // }
     return view('landing');
 });
 

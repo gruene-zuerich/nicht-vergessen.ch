@@ -38,7 +38,7 @@ $voicememos = [
             <p class="!text-lg">Beim letzten zweiten Wahlgang der Ständeratswahlen 2019 haben NUR 20 Prozent der Zürcher:innen gewählt. Für so eine wichtige Wahl verdammt wenig, oder? Damit es 2023 anders wird, kommt es jetzt darauf an, möglichst viele Menschen an die Urnen zu bringen.</p>
             <p class="!text-lg">Wenn wir einen weiteren Rechtsrutsch verhindern und den Klimaschutz im Ständerat stärken wollen, dann müssen wir alle unser Umfeld daran erinnern, jetzt Tiana Moser zu wählen. <b>So kannst du mitmachen:</b></p>
             <div class="nv-buttongrid mt-8">
-                {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a> --}}
+                <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'voicemessages']);" data-screen="sprachnachrichten">Sprachnachrichten verschicken</a>
                 {{-- <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'reffle']);" data-screen="gewinnspiel">Beim Gewinnspiel mitmachen</a> --}}
                 <a href="#" class="nv-option-button animate w-full md:w-fit" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'textmessages']);" data-screen="textnachrichten">Nachrichten an Bekannte schreiben</a>
                 {{-- <a href="https://nuudel.digitalcourage.de/jZ4ANroTfyRaIAVe" target="_blank" onclick="_paq.push(['trackEvent', 'Support', 'support choice', 'flyer']);" class="nv-option-button animate w-full md:w-fit">Beim Flyern helfen</a> --}}
