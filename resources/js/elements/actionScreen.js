@@ -1,107 +1,6 @@
-import { Notyf } from 'notyf';
-import 'notyf/notyf.min.css';
-let history = [];
-const notyf = new Notyf();
 import WaveSurfer from 'wavesurfer.js'
 
-
-const setScreen = (screenId) => {
-    let currentScreen = document.querySelector(".nv-action-screen.current-screen")
-    let multiply = 1;
-    if (screenId == "reverse") {
-        screenId = history.pop().id
-        multiply = -1
-    }
-    let screen = document.querySelector(`.nv-action-screen#${screenId}`)
-    if (!screen) return
-    screen.animate([
-        { transform: `translateX(${100 * multiply}vw)` },
-        { transform: "translateX(0)" }
-    ], {
-        duration: 200,
-        easing: "ease-out",
-        fill: "forwards"
-    })
-    currentScreen.animate([
-        { transform: "translateX(0)" },
-        { transform: `translateX(${100 * multiply * -1}vw)` },
-    ], {
-        duration: 200,
-        easing: "ease-out",
-        fill: "forwards"
-    })
-    history.push(currentScreen)
-    window.history.pushState({ screen: screenId }, "", (screenId == "start") ? "/" : screenId);
-    screen.classList.add("current-screen")
-    currentScreen.classList.remove("current-screen")
-}
-
-window.addEventListener("click", function (e) {
-    let actionAnchor = e.target.closest("a")
-    if (!actionAnchor || !actionAnchor.dataset.screen) return
-    e.preventDefault()
-    let screenId = actionAnchor.dataset.screen
-    setScreen(screenId)
-})
-
-window.addEventListener("load", function () {
-    let path = window.location.pathname
-    if (path == "/" || path == "") return
-    setScreen(path.replace("/", ""))
-});
-
-window.addEventListener("popstate", function (e) {
-    if (e.state && e.state.screen) {
-        setScreen(e.state.screen)
-    }
-});
-
-
-// Textmessages
-
-if (document.querySelector(".nv-regenerate-message")) {
-    let button = document.querySelector(".nv-regenerate-message")
-    let textarea = document.querySelector("#examplemessage")
-    let currentMessage = textarea.dataset.initialMessage;
-    button.addEventListener("click", function (e) {
-        e.preventDefault()
-        let messages = JSON.parse(document.querySelector("#messages-json").innerHTML)
-        currentMessage++
-        if (currentMessage >= messages.length) currentMessage = 0
-        textarea.value = messages[currentMessage]
-        window.autoSize(textarea)
-    })
-
-    let shareButtons = document.querySelectorAll(".nv-share-button")
-    shareButtons.forEach((button) => {
-        button.addEventListener("click", function (e) {
-            let type = button.dataset.share
-            let message = encodeURIComponent(textarea.value)
-            let linebreak = encodeURIComponent("\n")
-            let url = encodeURIComponent(window.location.href)
-
-            switch (type) {
-                case "telegram":
-                    window.open(`https://t.me/share/url?url=${url}&text=${message}`, "_blank")
-                    break
-                case "whatsapp":
-                    window.open(`https://api.whatsapp.com/send?text=${message + linebreak + url}`, "_blank")
-                    break
-                case "email":
-                    window.open(`mailto:?subject=${message}&body=${url}`, "_blank")
-                    break
-                case "twitter":
-                    window.open(`https://twitter.com/intent/tweet?text=${message + encodeURIComponent("\n#WirUndJetzt #Klimawahl23")}&url=${url}`, "_blank")
-                    break
-                case "copy":
-                    navigator.clipboard.writeText(decodeURIComponent(message) + "\n" + decodeURIComponent(url))
-                    notyf.success("Text in die Zwischenablage kopiert! :)")
-                    break
-            }
-        })
-    })
-}
-
+if (!window._paq) window._paq = [];
 
 // Voicemessages
 
@@ -112,8 +11,8 @@ window.addEventListener("load", function () {
         let memo = waveElement.closest(".nv-voicememo").dataset.memo
         let wavesurfer = WaveSurfer.create({
             container: waveElement,
-            waveColor: '#84B414',
-            progressColor: '#E10078',
+            waveColor: 'white',
+            progressColor: '#FAD6D6',
             url: `/media/audio/memos/${memo}.mp3`,
             height: 40,
         });
@@ -135,12 +34,11 @@ window.addEventListener("load", function () {
                         wavesurfer.on("finish", function () {
                             button.classList.remove("playing")
                             button.innerHTML = "play_arrow"
-                            window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                         })
                         button.innerHTML = "pause_circle"
+                        window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                     } else {
                         button.innerHTML = "play_arrow"
-                        window._paq.push(['trackEvent', 'Voicememo', 'play', memo]);
                     }
                 } else if (button.dataset.action == "download") {
                     let a = document.createElement("a")
@@ -154,20 +52,3 @@ window.addEventListener("load", function () {
         })
     }
 });
-
-
-if (document.querySelector("#copy-source-url")) {
-    document.querySelector("#copy-source-url").addEventListener("click", function (e) {
-        e.preventDefault()
-        let button = document.querySelector("#copy-source-url")
-        if (button.dataset.state != "copied") {
-            let url = button.dataset.sourceUrl;
-            navigator.clipboard.writeText(url)
-            notyf.success("Link in die Zwischenablage kopiert! :)")
-            button.dataset.state = "copied"
-            button.innerHTML = "Weiter"
-        } else {
-            setScreen("gewinnspiel-4");
-        }
-    });
-}

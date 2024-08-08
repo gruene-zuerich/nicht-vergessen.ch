@@ -10,6 +10,7 @@ export default {
             colors: {
                 gruen: "#84B414",
                 magenta: "#E10078",
+                sprot: "#E73134"
             }
         },
     },

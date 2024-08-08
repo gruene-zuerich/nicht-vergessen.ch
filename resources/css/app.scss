@@ -2,5 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./typography/typography.scss";
-@import "./elements/style.scss";
+@import url(https://fonts.bunny.net/css?family=inter:400,800);
+
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAD6D6;
+}
