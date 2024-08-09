@@ -1,9 +1,10 @@
 @php
 
 $voicememos = [
-    "bettina_looser" => "Bettina Looser in den Regierungsrat!",
-    "fiona_zolg" => "Fiona Zolg als Präsidentin des Schulrates!",
+    "bettina_looser" => "Wahlaufruf von Bettina Looser",
+    "fiona_zolg" => "Wahlaufruf von Fiona Zolg",
     "peter_neukomm" => "Wahlaufruf von Stadtpräsident Peter Neukomm",
+    "christine_thommen" => "Wahlaufruf von Stadträtin Christine Thommen",
 ];
 @endphp
 
