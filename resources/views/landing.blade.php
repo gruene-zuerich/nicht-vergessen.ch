@@ -15,7 +15,7 @@ $voicememos = [
                 <x-heroine />
             </div>
             <div class="voicememos-container max-w-3xl mx-auto mt-6 md:mt-12 text-lg md:text-2xl">
-                <p><b>Am 18. August wählen wir den Regierungsrat.</b> Hast du dein Stimmcouvert schon abgegeben? Und dein Umfeld? Erinnere deine Freund*innen an die Wahlen, <b>indem du ihnen Sprachnachrichten von unseren Kandidat*innen und Amtsträger*innen schickst!</b></p>
+                <p><b>Am 18. August sind im Kanton und in der Stadt Schaffhausen Wahlen.</b> Hast du dein Stimmcouvert schon abgegeben? Und dein Umfeld? Erinnere deine Freund*innen an die Wahlen, <b>indem du ihnen Sprachnachrichten von unseren Kandidat*innen und Amtsträger*innen schickst!</b></p>
                 <div class="voicememos-list mt-8 grid grid-cols-1 gap-4">
                 @foreach ($voicememos as $key => $voicememo)
                     <div>
